@@ -5,7 +5,7 @@ locals {
     "infra-layer"  = "live/kubernetes"
     "env-name"     = local.env_name
   }
-  env_name            = terraform.workspace
+  env_name            = var.env_name == "" ? terraform.workspace : var.env_name
   environment_rg_name = "az-infra-base-${local.env_name}"
 }
 

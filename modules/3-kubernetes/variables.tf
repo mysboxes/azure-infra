@@ -6,6 +6,12 @@ variable "tenant_id" {
   type = string
 }
 
+variable "env_name" {
+  type        = string
+  default     = ""
+  description = "Live empty to use terraform.workspace"
+}
+
 variable "environment_location" {
   type    = string
   default = "West Europe"
